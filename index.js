@@ -71,7 +71,6 @@ client.connect(err => {
       })
   })
 
-
   app.delete('/deleteProduct/:id', (req, res) => {
     const id = ObjectID(req.params.id)
     productCollection.deleteOne({ _id: id })
@@ -79,6 +78,5 @@ client.connect(err => {
         res.send(result.deletedCount > 0)
       })
   })
-
 
 });
